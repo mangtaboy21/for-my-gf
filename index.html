@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffcccc;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ff4d4d;
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .heart {
+            font-size: 100px;
+            color: red;
+            animation: heartbeat 1s infinite alternate;
+        }
+        @keyframes heartbeat {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+        .button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>will you be my valentine? ❤️</h1>
+    <p>i love you so much bebu!</p>
+    <p class="heart">❤️</p>
+    
+    <button class="button" onclick="showMessage('YES')">YES! 💕</button>
+    <button class="button" onclick="showMessage('NO')">NO 😢</button>
+
+    <p id="response" style="font-size:2em; margin-top:20px;"></p>
+
+    <script>
+        function showMessage(answer) {
+            if (answer === 'YES') {
+                document.getElementById('response').innerHTML = "Yay! I can't wait! 💖";
+            } else {
+                document.getElementById('response').innerHTML = "Oh no... but I'll still love you! 😘";
+            }
+        }
+    </script>
+</body>
+</html>
